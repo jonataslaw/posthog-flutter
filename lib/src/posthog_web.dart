@@ -5,6 +5,7 @@ import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 
 class PosthogWeb {
   static void registerWith(Registrar registrar) {
+    WidgetsFlutterBinding.ensureInitialized();
     final MethodChannel channel = MethodChannel(
       'posthog_flutter',
       const StandardMethodCodec(),
